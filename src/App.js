@@ -8,7 +8,9 @@ import {
   Routes,
 } from "react-router-dom";
 import {useState} from "react";
+import Resume from "./components/Resume";
 function App() {
+
   const [mode, setMode] = useState('dark');
   const toggleMode = () => {
     if(mode === 'dark'){
@@ -24,9 +26,11 @@ function App() {
   return (
       <Router>
         <Navbar toggleMode={toggleMode} mode={mode}/>
+          {/*<Resume/>*/}
         <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/form" element={<Form mode={mode}/>}/>
+          <Route exact path="/resume" element={<Resume mode={mode}/>}/>
         </Routes>
       </Router>
   );

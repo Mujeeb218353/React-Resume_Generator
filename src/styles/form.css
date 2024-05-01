@@ -32,6 +32,28 @@
     }
 }
 
+.login-containerLightMode {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    width: 95%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    animation: pulseLightMode 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulseLightMode {
+    0% {
+        transform: scale(0.98);
+        box-shadow: 0 0 0 10px rgba(162, 163, 165, 0.2);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 15px rgba(162, 163, 165, 0.4);
+    }
+}
+
 .login-header {
     text-align: center;
     margin-bottom: 20px;
@@ -40,7 +62,7 @@
 .login-header h2 {
     color: #61dafb;
     margin-bottom: 10px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .login-header span {
@@ -74,8 +96,20 @@ input {
     border: none;
     border-radius: 5px;
     background-color: transparent;
-    color: #ffffff;
+    color: slategrey;
     outline: none;
+    overflow: hidden;
+}
+
+.inputLightMode {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: grey;
+    outline: none;
+    overflow: hidden;
 }
 
 .options {
@@ -155,19 +189,12 @@ label {
     }
 }
 
-/*.degree{*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    background: transparent;*/
-/*    border: none;*/
-/*}*/
-/*.degree:after{*/
-/*    border: none;*/
-/*}*/
-/*.degree option{*/
-/*    height: 100%;*/
-/*    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);;*/
-/*    border: none;*/
-/*    color: black;*/
+.skills {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #3a9bd9, #61dafb);
+    color: #ffffff;
+}
 
-/*}*/
